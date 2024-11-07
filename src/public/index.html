@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/available.room.template.css" />
+    <link rel="stylesheet" href="./css/chat.container.template.css" />
+    <link rel="stylesheet" href="./css/dialog.template.css" />
+    <link rel="stylesheet" href="./css/header.chat.template.css" />
+    <link rel="stylesheet" href="./css/input.message.footer.template.css" />
+    <link rel="stylesheet" href="./css/message.template.css" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <section class="left-section__chats-container">
+          <header class="header">
+            <h3>Chats</h3>
+            <p id="username">Hola,</p>
+          </header>
+          <ul
+            class="flex flex-col overflox-y-auto overflow-x-hidden max-w-72 w-full min-w-24"
+          >
+            <li class="hover:bg-[#999797]">
+              <figure>
+                <div>C</div>
+              </figure>
+              <div>
+                <p>ChatName</p>
+                <p>{{new Date().toDateString()}}</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section></section>
+      </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
